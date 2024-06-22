@@ -1,3 +1,4 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -24,15 +25,17 @@ body {
     overflow: hidden;
 }
 
+/* Logo */
+.logo {
+    width: 50px;
+    margin: 30px 0;
+}
+
+/* Navbar */
 .navbar {
     width: 100%;
     display: flex;
     align-items: center;
-}
-
-.logo {
-    width: 50px;
-    margin: 30px 0;
 }
 
 nav {
@@ -44,7 +47,6 @@ li {
     list-style: none;
     display: inline-block;
     margin-right: 30px;
-
 }
 
 .navlink {
@@ -52,11 +54,17 @@ li {
     text-decoration: none;
     color: #000;
     font-size: 14px;
-
 }
 
 .navlink:hover {
     color: #fb5283;
+}
+
+/* Main */
+.menu-icon {
+    margin-right: 15px;
+    width: 25px;
+    display: none;
 }
 
 .row {
@@ -79,7 +87,6 @@ li {
     position: absolute;
     left: -40px;
     top: 8px;
-
 }
 
 h2 {
@@ -115,7 +122,24 @@ h4 {
     cursor: pointer;
     background: linear-gradient(to right, #fb5283, #ff3527);
     z-index: 2;
+    transition: all 0.5s ease-in-out;
+}
 
+.buy img {
+    width: 30px;
+    display: none;
+}
+
+.buy:hover {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 160px;
+}
+
+.buy:hover img {
+    display: block;
 }
 
 .column-2 {
@@ -124,10 +148,11 @@ h4 {
     position: relative;
 }
 
+/* Controller */
 .controller {
     width: 70%;
     z-index: 2;
-
+    animation: moveController 2s infinite alternate ease-in-out;
 }
 
 .color-box {
@@ -140,9 +165,9 @@ h4 {
     border-radius: 20px 0 0 20px;
     z-index: 1;
     transform: translateX(150px);
-
 }
 
+/* Cart */
 .add-cart {
     z-index: 2;
     border: none;
@@ -156,6 +181,7 @@ h4 {
     max-width: 55px;
 }
 
+/* Social-links */
 .social-links {
     display: flex;
     justify-content: center;
@@ -168,17 +194,13 @@ h4 {
     cursor: pointer;
 }
 
-.menu-icon {
-    margin-right: 15px;
-    width: 25px;
-    display: none;
-
+@keyframes moveController {
+    from {
+        transform: translate(-5%, -5%) rotate(-5deg);
+    }
 }
 
-
-
 /* Media Query */
-
 @media (max-width: 760px) {
     .container {
         width: 100vw;
@@ -195,17 +217,17 @@ h4 {
         margin-bottom: 30px;
     }
 
-
     #menu-list {
         position: relative;
         top: 60px;
         left: 60px;
         overflow: hidden;
+        transition: all 0.5s ease-in-out;
     }
 
     .menu-icon {
         display: block;
-        ;
+        cursor: pointer;
     }
 
     .nav-li {
@@ -213,7 +235,7 @@ h4 {
         margin-top: 5px;
     }
 
-    .color-box{
+    .color-box {
         transform: translateX(70px);
     }
 }

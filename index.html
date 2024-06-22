@@ -15,39 +15,46 @@
 
 <body>
     <div class="container">
+        <!-- Navbar -->
         <div class="navbar">
+            <!-- Logo -->
             <img class="logo" src="./img/logo.png" alt="Logo playstation">
             <nav>
                 <ul id="menu-list">
-                    <li class="nav-li"><a class="navlink" href="">Consoles</a></>
+                    <li class="nav-li"><a class="navlink" href="">Consoles</a>
                     <li class="nav-li"><a class="navlink" href="">Acessórios</a></li>
                     <li class="nav-li"><a class="navlink" href="">Controles</a></li>
                     <li class="nav-li"><a class="navlink" href="">outros</a></li>
                 </ul>
             </nav>
-            <img class="menu-icon" src="./img/menu.png" alt="notao-menu" onclick="showMenu()">
+            <!-- Menu -->
+            <img class="menu-icon" src="./img/menu.png" alt="botao-menu" onclick="showMenu()">
         </div>
 
-        <div class="row">
-            <div class="column-1">
-                <h2>Ps5 DualShok</h2>
-                <h3>Wireless Controller for Playstation</h3>
-                <p>Controle Original</p>
-                <h4>R$ 222,50</h4>
-                <button class="buy">Comprar agora</button>
+        <main>
+            <div class="row">
+                <div class="column-1">
+                    <h2>Ps5 DualShok</h2>
+                    <h3>Controlador sem fio para Playstation</h3>
+                    <p>Controle Original</p>
+                    <h4>R$ 222,50</h4>
+                    <button class="buy">Comprar agora <img src="/img/arrow.png" alt="seta"></button>
+                </div>
+                <!-- control image -->
+                <div class="column-2">
+                    <img class="controller" src="./img/controller.png" alt="Controle">
+
+                    <div class="color-box"></div>
+
+                    <!-- Cart image -->
+                    <button class="add-cart">
+                        <img src="./img/add.png" alt="adcionar ao carrinho">
+                    </button>
+                </div>
             </div>
+        </main>
 
-            <div class="column-2">
-                <img class="controller" src="./img/controller.png" alt="Controle">
-
-                <div class="color-box"></div>
-
-                <button class="add-cart">
-                    <img src="./img/add.png" alt="adcionar ao carrinho">
-                </button>
-            </div>
-        </div>
-
+        <!-- social-links -->
         <div class="social-links">
             <img src="./img/fb.png" alt="Facebook">
             <img src="./img/ig.png" alt="Instagram">
@@ -55,6 +62,7 @@
         </div>
     </div>
 
+    <!-- Script -->
     <script src="script.js"></script>
 
 </body>
